@@ -1,10 +1,3 @@
-/*
-YOUR 3 CHALLENGES
-Change the game to follow these rules:
-1. A player looses his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn. (Hint: Always save the previous dice roll in a separate variable)
-2. Add an input field to the HTML where players can set the winning score, so that they can change the predefined score of 100. (Hint: you can read that value with the .value property in JavaScript. This is a good oportunity to use google to figure this out :)
-3. Add another dice to the game, so that there are two dices now. The player looses his current score when one of them is a 1. (Hint: you will need CSS to position the second dice, so take a look at the CSS code for the first one.)
-*/
 
 let scores;
 let roundScore;
@@ -13,12 +6,59 @@ let gamePlaying;
 let lastDice1;
 let lastDice2;
 let finalScore;
-let initFinalScore = 20;
-let dice1DOM = document.getElementById("dice-1");
-let dice2DOM = document.getElementById("dice-2");
-let inputDOM = document.querySelector(".final-score");
+const initFinalScore = 20;
+const dice1DOM = document.getElementById("dice-1");
+const dice2DOM = document.getElementById("dice-2");
+const inputDOM = document.querySelector(".final-score");
+
+// Replace the broken images with an image telling visitors that they are not found
+
+const images = document.querySelectorAll("img")
+images.forEach.call(images, function(el){
+  el.addEventListener('error', function(e) {
+    e.target.src = './404.jpg'
+  })
+})
+
+
+
+// Load a css file dynamically
+
+function CSSLoad(file) {
+  const link = document.createElement("link");
+  link.setAttribute("rel", "stylesheet");
+  link.setAttribute("type", "text/css");
+  link.setAttribute("href", file);
+  document.getElementsByTagName("head")[0].appendChild(link);
+}
+
+CSSLoad('./text-style.css');
+
+// Create an element
+
+const finalScoreText = document.createElement("div")
+finalScoreText.setAttribute("class", "finalScoreText")
+finalScoreText.innerHTML = `points to win<br><span class="span-text"></span>`;
+document.getElementsByClassName("wrapper")[0].appendChild(finalScoreText);
 
 init();
+
+// Attach an event handler
+
+inputDOM.onkeyup = function () {
+  let x = event.target.value;
+  if (isNaN(+x) || +x === 0) {
+    inputDOM.value = "";
+    inputDOM.placeholder = "Enter a number";
+    finalScore = initFinalScore;
+  } else if (!isNaN(+x)) {
+    inputDOM.value = x;
+    finalScore = x;
+    document.querySelector(".span-text").textContent = finalScore;
+  }
+};
+
+
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
   if (gamePlaying) {
@@ -29,7 +69,12 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
     dice2DOM.style.display = "block";
 
     dice1DOM.src = `dice-${dice1}.png`;
+    dice1DOM.alt = `dice ${dice1}`
     dice2DOM.src = `dice-${dice2}.png`;
+    dice2DOM.alt = `dice ${dice2}`;
+
+
+
 
     if (dice1 === 6 && dice2 === 6) {
       scores[activePlayer] = 0;
@@ -48,7 +93,6 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
 
 document.querySelector(".btn-hold").addEventListener("click", function () {
   if (gamePlaying) {
-    finalScore = inputDOM.value
     scores[activePlayer] += roundScore;
     document.querySelector(`#score-${activePlayer}`).textContent =
       scores[activePlayer];
@@ -102,6 +146,7 @@ function init() {
 
   inputDOM.value = "";
   inputDOM.placeholder = "Final score";
+  document.querySelector(".span-text").textContent = finalScore;
 
   document.getElementById("score-0").textContent = "0";
   document.getElementById("score-1").textContent = "0";
