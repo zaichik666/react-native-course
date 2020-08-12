@@ -14,7 +14,6 @@ let gamePlaying;
 let diceDOM = document.querySelector(".dice");
 
 init();
-console.log(scores);
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
   if (gamePlaying) {
