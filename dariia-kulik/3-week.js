@@ -15,7 +15,7 @@ const revenueP = pants * pantsPrice
 function res() {
     return revenueP > revenueS ? 'We received more revenue from pants' : revenueP < revenueS ? 'We received more revenue from skirts' : ' Revenue from pants and skirts are equal'
 }
-console.log(res(''))
+console.log(res())
 
 
 
@@ -46,14 +46,14 @@ function res() {
     } return 'same heigh'
 }
 
-console.log(res(''))
+console.log(res())
 
 
 function res() {
     return nickHeigh > alexHeigh && nickHeigh > tomHeigh ? 'Nick' : alexHeigh > nickHeigh && alexHeigh > tomHeigh ? 'Alex' : tomHeigh > alexHeigh && tomHeigh > nickHeigh ? 'Tom' : 'same heigh'
 }
 
-console.log(res(''))
+console.log(res())
 
 
 /*Complete code challenge from the Section 2 of Udemy course(Exercise 12) */
@@ -71,7 +71,7 @@ function res() {
     return BMIMark > BMIJohn ? 'Mark`s BMI higher than John`s' : BMIJohn > BMIMark ? 'John`s BMI higher than Mark`s' : 'Mark and John have equal BMI'
 }
 
-console.log(res(''))
+console.log(res())
 /* 
    - Camping
    - It's sunny in California, but the sky is covered with clouds.
@@ -103,14 +103,14 @@ function res() {
         return 'Amanda receive a 15% discount'
     } return 'No discount'
 }
-console.log(res(''))
+console.log(res())
 
 
 function res() {
     return Elsa >= 100 ? 'Elsa receive a 15% discount' : Amanda >= 100 ? 'Amanda receive a 15% discount' : 'No discount'
 }
 
-console.log(res(''))
+console.log(res())
 
 
 
