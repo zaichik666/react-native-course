@@ -119,7 +119,7 @@ console.log(res(''))
 - "N T-shirts left"
     - “T - shirts are not available”.*/
 function Tshirt(CustomPolite) {
-    return (CustomPolite ? '7 T-shirts left' : 'T-shirts are not available')
+    return CustomPolite ? '7 T-shirts left' : 'T-shirts are not available'
 }
 
 console.log(Tshirt(true))
@@ -176,12 +176,12 @@ The composition of the drink is string: "Vodka, liqueur, juice, pineapple, raspb
 The guest asked to remove pineapple from the cocktail.Transform the string into an array, remove the extra element, transfrom back to string and serve the right cocktail to the guest.
 If the cocktail does not have pineapple, the guest will answer "Delicious" otherwise "I won't come here again." Help Nick make the right cocktail.*/
 
-const cocktail = 'Vodka, liqueur, juice, pineapple, raspberry, ice'
-const a = cocktail.split(',')
-const b = a.splice(3, 1).toString()
+const a = cocktail.split(', ')
+ const b = a.splice(3, 1)
+ const z = a.toString()
 
-console.log(a)
-console.log(b)
+ console.log(a)
+ console.log(z)
 
 
 /*  - Weekdays
