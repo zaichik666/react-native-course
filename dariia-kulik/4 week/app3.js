@@ -30,3 +30,35 @@ function scrollToTop() {
   window.scrollTo(0, 0)
 }
 scrollToTop()
+
+
+
+/*Load a css file dynamically*/
+function myFunctionC() {
+  document.getElementsByTagName("player-name")[0].setAttribute("style1.css", "democlass")
+}
+// 2 
+const cssdyn = document.createElement("link")
+cssdyn.setAttribute("rel", "stylesheet")
+cssdyn.setAttribute("href", "style1.css")
+document.getElementsByTagName("head")[0].appendChild(сssdyn)
+
+/*Select the children of an element */
+let child = document.body.children
+
+
+// Replace the broken images with an image telling visitors that they are not found
+
+const images = document.querySelectorAll('img')
+images.forEach.call(images, function (ele) {
+  ele.addEventListener('error', function (eve) {
+    eve.target.src = 'https://images.app.goo.gl/ConNPad7R48vLaPo8'
+  })
+})
+
+
+
+
+
+
+
