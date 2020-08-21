@@ -3,7 +3,7 @@ Complete following tasks with DOM Manipulation and Events
 
 - Add or remove class from an element */
   element.classList.add('className')
-  element.classList.add('className')
+  element.classList.remove('className')
 
 /*
 - Attach or detach an event handler */
@@ -49,6 +49,7 @@ Complete following tasks with DOM Manipulation and Events
 
 /*
 - Select the children of an element */
-  parentElement.children
+
+parentElement.children
 
 /* *************************************************** */
