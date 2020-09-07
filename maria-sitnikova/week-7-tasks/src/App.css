@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+  background-color: rgb(35, 37, 37);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: black
+}
+
+.column {
+  width: 20%;
+  padding: 5px;
+  padding-left: 40px;
+  text-align: left;
+  animation: colunm-color 10s linear 1s infinite normal forwards;
+}
+
+.main-content {
+  background-color: white;
+  width: 50%;
+  padding: 15px;
+  padding-left: 20px;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.main-header {
+  text-decoration-line: underline overline;
+  text-decoration-style: solid;
+  animation: decoration-color 10s linear 1s infinite normal forwards;
+}
+
+
+@keyframes colunm-color {
+  from {background-color: rgb(178, 250, 250);}
+  20% {background-color: rgb(212, 245, 192);}
+  40% {background-color: rgb(247, 246, 194);}
+  60% {background-color: rgb(245, 206, 194);}
+  80% {background-color: rgb(201, 196, 247);}
+  to {background-color: rgb(178, 250, 250);}
+}
+
+@keyframes decoration-color {
+  from {text-decoration-color: rgb(178, 250, 250);}
+  20% {text-decoration-color: rgb(212, 245, 192);}
+  40% {text-decoration-color: rgb(247, 246, 194);}
+  60% {text-decoration-color: rgb(245, 206, 194);}
+  80% {text-decoration-color: rgb(201, 196, 247);}
+  to {text-decoration-color: rgb(178, 250, 250);}
+}
