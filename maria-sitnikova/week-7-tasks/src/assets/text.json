@@ -1,0 +1,31 @@
+{
+"about_me": "I am a highly competent IT professional with a proven track record in designing websites, networking and managing databases. I have strong technical skills as well as excellent interpersonal skills, enabling me to interact with a wide range of clients. I am eager to be challenged in order to grow and further improve my IT skills. My greatest passion is in life is using my technical know-how to benefit other people and organisations.",
+"skills":["Git",
+  "JavaScript",
+  "React",
+  "React Native",
+  "SASS",
+  "HTML",
+  "CSS",
+  "Webpack",
+  "Node.js",
+  "Express.js"
+],
+"experience":[
+  "In the time of chimpanzees I was a monkey.",
+  "Butane in my veins and I’m out to cut the junkie.",
+  "With the plastic eyeballs, spray-paint the vegetables.",
+  "Dog food stalls with the beefcake pantyhose.",
+  "Kill the headlights and put it in neutral.",
+  "Stock car flamin’ with a loser and the cruise control.",
+  "Baby’s in reno with the vitamin D.",
+  "Got a couple of couches, sleep on the love-seat.",
+  "Someone came sayin’ I’m insane to complain.",
+  "About a shotgun wedding and a stain on my shirt.",
+  "Don’t believe everything that you breathe.",
+  "You get a parking violation and a maggot on your sleeve.",
+  "So shave your face with some mace in the dark.",
+  "Savin’ all your food stamps and burnin’ down the trailer park."
+],
+"education":"Bauman Moscow State Technical University — Power Engineering"
+}
